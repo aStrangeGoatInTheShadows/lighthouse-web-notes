@@ -1,6 +1,6 @@
 const args = process.argv;
 
-const sum = function () {
+const sum = function() {
   return args[2] * args[3];
 };
 
