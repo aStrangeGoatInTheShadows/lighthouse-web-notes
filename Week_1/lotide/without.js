@@ -33,6 +33,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]);
+
+
 //console.log(without([1, 2, 3], [1]));
 console.log(without(["1", "2", "3"], [1, 2, "3"]));
 
