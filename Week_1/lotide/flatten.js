@@ -23,13 +23,15 @@ const assertEqual = function(actual, expected) {
 const flatten = function (arrayToFlat) {
   let fltArry = [];
 
+  console.log('we ran flatten');
+
   for (let item of arrayToFlat) {
-    if(item.length > 1){
+    if(Array.isArray(item)){
       for(let subItem of item) {
-        fltArray += subItem;
+        fltArry += subItem;
       }
     } else {
-      fltArray += item;
+      fltArry += item;
     }
   }
 
