@@ -1,4 +1,5 @@
 
+// Returns all contents of an array up until the escape character or condition passed by callback
 const takeUntil = (input, callBack) => {
   const output = [];
 
@@ -10,8 +11,6 @@ const takeUntil = (input, callBack) => {
     }
   }
 }
-
-
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
