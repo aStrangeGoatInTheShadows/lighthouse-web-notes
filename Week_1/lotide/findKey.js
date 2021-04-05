@@ -17,11 +17,6 @@ const findKey = (objectToSearch, cb) => {
 //  }
 }
 
-
-
-
-
-
 log(findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },

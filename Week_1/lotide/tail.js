@@ -1,3 +1,6 @@
+const { builtinModules } = require('node:module');
+const assertEqual = require('./assertEqual');
+
 // FUNCTION IMPLEMENTATION
 const tail = function(dataArray) {
   let dataTail = [];
@@ -28,8 +31,5 @@ const checkTail = function(dataArray, expectedOutput) {
   console.log(`Assertion Passed: ${dataArray} === ${expectedOutput}`);
 };
 
-const assertEqual = function(actual, expected) {
-  return actual === expected;
-};
+module.exports = tail;
 
-checkTail(["Yo Yo", "Lighthouse", "Labs"], ["Lighthouse", "Labs"]);
