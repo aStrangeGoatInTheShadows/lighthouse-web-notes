@@ -23,8 +23,6 @@ const assertEqual = function(actual, expected) {
 const flatten = function (arrayToFlat) {
   let fltArry = [];
 
-  console.log('we ran flatten');
-
   for (let item of arrayToFlat) {
     if(Array.isArray(item)){
       for(let subItem of item) {
@@ -39,5 +37,7 @@ const flatten = function (arrayToFlat) {
 }
 
 console.log(flatten([1, 2, [3, 4], 5, [6]]) );
+
+module.exports = flatten;
 
 //assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
