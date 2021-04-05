@@ -1,3 +1,13 @@
-const checkTail = require('../checkTail');
+const assert = require('chai').assert;
+const tail = require('../tail');
 
-checkTail(["Yo Yo", "Lighthouse", "Labs"], ["Lighthouse", "Labs"]);
+//checkTail(["Yo Yo", "Lighthouse", "Labs"], ["Lighthouse", "Labs"]);
+
+describe("#tail", () => {
+  it("returns [Lighthouse, Labs] for [Yo Yo, Lighthouse, Labs]", () => {
+    assert.deepEqual(tail(['Yo Yo', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
+  });
+  
+
+  //////////////////////////////// END OF DESCRIBE //////////////////////////////////
+});
