@@ -18,4 +18,6 @@ const countLetters = function(stringToCount) {
   return results;
 }
 
-console.log(countLetters('supercalifragilisticexpialidocious'));
+module.exports = countLetters;
+
+// console.log(countLetters('supercalifragilisticexpialidocious'));

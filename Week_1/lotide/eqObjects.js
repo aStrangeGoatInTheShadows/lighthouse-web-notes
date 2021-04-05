@@ -1,10 +1,5 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`Assertion failed: ${actual} !== ${expected}`);
-  }
-};
+const eqArrays = require('./eqArrays');
+const lotide = require('./index');
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
@@ -27,18 +22,7 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
-const eqArrays = function(ar1, ar2) {
-  if (ar1.length !== ar2.length) {
-    return false;
-  }
-
-  for (let i = 0; i <= ar1.length; i++) {
-    if (ar1[i] !== ar2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+module.exports = eqObjects;
 
 /* Test Code
 const ab = { a: "1", b: "2" };
@@ -50,10 +34,10 @@ assertEqual(eqObjects(ab, abc), false); // => false
 */
 
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true); // => true
+//  const cd = { c: "1", d: ["2", 3] };
+//  const dc = { d: ["2", 3], c: "1" };
+//  lotide.assertEqual(eqObjects(cd, dc), true); // => true
 
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false); // => false
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// assertEqual(eqObjects(cd, cd2), false); // => false
