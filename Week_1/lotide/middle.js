@@ -19,3 +19,5 @@ const middle = function (arry) {
 
   return arryOfMiddle;
 };
+
+module.exports = middle;
